@@ -14,6 +14,8 @@ export const getLength = ([x, y]): number => Math.sqrt(x ** 2 + y ** 2);
 
 export const normalize = (v: Vec2): Vec2 => scale(v, 1 / getLength(v));
 
+export const safeNormalize = (v: Vec2) => getLength(v) === 0 ? vec2(0) : normalize(v);
+
 export const floor = (v: Vec2) => v.map(Math.floor) as Vec2;
 
 export const ceil = (v: Vec2) => v.map(Math.ceil) as Vec2;
