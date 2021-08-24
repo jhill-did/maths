@@ -71,4 +71,4 @@ export const makeLookAtMatrix = (position: Vec3, target: Vec3, up: Vec3) => {
   mat[15] = 1.0;
 
   return mat as Mat4;
-}
+};

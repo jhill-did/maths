@@ -25,3 +25,13 @@ export const round = (v: Vec2) => v.map(Math.round) as Vec2;
 export const distance = (a: Vec2, b: Vec2) => getLength(subtract(a, b));
 
 export const dot = ([ax, ay]: Vec2, [bx, by]: Vec2) => (ax * bx) + (ay * by);
+
+export const min = ([ax, ay]: Vec2, [bx, by]: Vec2) => vec2(
+  Math.min(ax, bx),
+  Math.min(ay, by),
+);
+
+export const max = ([ax, ay]: Vec2, [bx, by]: Vec2) => vec2(
+  Math.max(ax, bx),
+  Math.max(ay, by),
+);
